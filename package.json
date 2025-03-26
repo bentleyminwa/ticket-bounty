@@ -1,5 +1,5 @@
 {
-  "name": "road-to-next-app",
+  "name": "ticket-bounty",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint-fix": "next lint --fix"
+    "lint-fix": "next lint --fix",
+    "type": "tsc --noEmit"
   },
   "dependencies": {
     "next": "15.2.3",

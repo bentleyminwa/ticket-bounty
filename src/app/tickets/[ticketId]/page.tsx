@@ -16,7 +16,6 @@ const TicketPage = async ({ params }: TicketPageProps) => {
     <div>
       <h2>{ticket.title}</h2>
       <p>{ticket.content}</p>
-      <p>{ticket.status}</p>
     </div>
   );
 };
