@@ -1,6 +1,7 @@
 import { Placeholder } from "@/components/custom/placeholder";
 import { buttonVariants } from "@/components/ui/button";
 import { mockData } from "@/data";
+import { TicketItem } from "@/features/ticket/components/ticket-item";
 import { ticketsPath } from "@/paths";
 import Link from "next/link";
 
@@ -29,9 +30,8 @@ const TicketPage = async ({ params }: TicketPageProps) => {
   }
 
   return (
-    <div>
-      <h2>{ticket.title}</h2>
-      <p>{ticket.content}</p>
+    <div className="flex justify-center">
+      <TicketItem ticket={ticket} isDetailed />
     </div>
   );
 };
