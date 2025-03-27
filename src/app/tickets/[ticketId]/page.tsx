@@ -1,7 +1,7 @@
 import { Placeholder } from "@/components/custom/placeholder";
 import { buttonVariants } from "@/components/ui/button";
-import { mockData } from "@/data";
 import { TicketItem } from "@/features/ticket/components/ticket-item";
+import { getTicket } from "@/features/ticket/queries/get-ticket";
 import { ticketsPath } from "@/paths";
 import Link from "next/link";
 
@@ -11,7 +11,7 @@ type TicketPageProps = {
 
 const TicketPage = async ({ params }: TicketPageProps) => {
   const { ticketId } = await params;
-  const ticket = mockData.find((ticket) => ticket.id === ticketId);
+  const ticket = await getTicket(ticketId);
 
   if (!ticket) {
     return (
@@ -30,7 +30,7 @@ const TicketPage = async ({ params }: TicketPageProps) => {
   }
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center animate-fade-in-from-top">
       <TicketItem ticket={ticket} isDetailed />
     </div>
   );

@@ -1,4 +1,4 @@
-export const mockData = [
+export const mockTickets = [
   {
     id: "1",
     title: "Ticket 1",
