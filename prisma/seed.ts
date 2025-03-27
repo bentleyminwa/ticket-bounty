@@ -31,7 +31,7 @@ const seed = async () => {
   });
 
   const t1 = performance.now();
-  console.log(`Db seeding finished in ${t1 - t0} milliseconds`);
+  console.log(`Db seeding finished in ${t1 - t0} ms`);
 };
 
 seed();
